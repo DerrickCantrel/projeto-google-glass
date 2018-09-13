@@ -1,0 +1,258 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web'); /* Fonte referenciada de um site público (Google Fonts) */
+@font-face { /* Importando uma fonte baixada de algum site. */
+    font-family: 'FonteLogo'; /* Definindo um nome qualquer para fonte */
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    background-color: #dddddd;
+    color: rgba(0, 0, 0, 1);
+    font-family: Arial, sans-serif;
+}
+
+div#interface {
+    width: 900px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto; /* Esses parâmetros, são respectivamente: topo(top), direita(rigth), abaixo(bottom) e esquerda(left) */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Aplicando sobremeanto na página */
+    padding: 10px; /* Para não ficar redudante ao utilizar o mesmo valor para o 4 sentidos, basta declarar apenas uma vez*/
+
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 780px;
+    top: 70;
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /* espessura da borda, cor e tipo */
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+
+header#cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    margin-top: 0px;
+}
+
+/* Formatação de imagem com Legenda */
+
+figure.foto-legenda {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black; /* Efeito de sombra */
+}
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0,.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+}
+
+/* Formatação do Menu */
+
+nav#menu {
+    display: block; /* Fazer com que o nav flutue pela tela */ 
+}
+
+nav#menu ul {
+    list-style: none; /* Retirando o tipos do Ul */
+    text-transform: uppercase; /* Transformando em letras maiusculas */
+    position: absolute;
+    top: -20px;
+    left: 300px;
+}
+
+nav#menu li {
+    display: inline-block; /* Irá fazer com o elemento seja exibido em um mesmo bloco de linha */
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: #ffffff;
+}
+
+/* Formatando a página inicial */
+
+section#corpo {
+    display: block; /* Definindo a estrutura como um bloco */
+    width: 520px;
+    float: left;
+    margin-right: 20px;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.direita {
+    text-align: right;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;  
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 12pt;
+    color: #606060;  
+}
+
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px; /* Espaço entre as células da tabela */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+ 
+}
+
+/* Tabela a esquerda */
+
+table#tabelaspec td.ce {
+    color: #ffffff;
+    background-color: #606060;  
+    vertical-align: top; 
+    font-weight: bold; 
+}
+
+/* Tabela a direita */
+
+table#tabelaspec td.cd {
+    background-color: #cecece;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px; 
+}
+
+aside#lateral {
+    display: block;
+    width: 300px;
+    float: left;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+aside#lateral h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+
+}
+
+footer#rodape {
+    clear: both; /* Limpando as configurações dos dois lados */
+    border-top: 1px solid #606060;
+    background-color: #888888;
+} 
+
+footer#rodape p {
+    text-align: center;
+}
+
+footer#rodape a {
+    list-style: none;
+    
+}
